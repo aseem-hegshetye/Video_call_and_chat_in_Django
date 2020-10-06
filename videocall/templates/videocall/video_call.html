@@ -1,0 +1,41 @@
+{% load static %}
+
+<html lang="en">
+<head>
+
+
+    <title>Video calling</title>
+    <script type="text/javascript">
+        var redishost= "{{ redishost }}";
+    </script>
+</head>
+<body>
+<h1>VIdeo shown</h1>
+<div>
+    <button id="idTakePictureBtn" autofocus>TakePicture</button>
+</div>
+<div>
+    Video: <select id="camera"></select>
+</div>
+<video id="idMyVideoTag" src="" autoplay></video>
+<video id="idTheirVideoTag" src="" autoplay></video>
+
+<div>
+    <label>Your name</label> <input type="text" id="idMyName">
+    <label>Message</label> <input type="text" id="idMessage">
+    <input type="submit" id="idSendMessage" value="Submit">
+    <div id="idChatArea">Message output: <br></div>
+    <div id="idSignalingArea">Signaling Message: <br></div>
+</div>
+
+<!--canvas is used for temporary processing an image-->
+<canvas id="idCanvas" style="display: none;"></canvas>
+
+<div>
+    <img src="" id="idImage" alt="">
+</div>
+
+<script src="{% static 'videocall/js/video_call.js' %}"></script>
+
+</body>
+</html>
