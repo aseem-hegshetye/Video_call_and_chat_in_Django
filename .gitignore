@@ -5,7 +5,7 @@
 
 __pycache__/
 
-migrations/*
+migrations
 
 *.sqlite3
 
